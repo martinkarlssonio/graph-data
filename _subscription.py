@@ -41,7 +41,7 @@ def fetchSubscription(arangoClient,subscriptionName):
         )
         # Iterate through the result cursor
         subscription_keys = [doc['_key'] for doc in cursor]
-        logging.info("Response from Query : {}".format(subscription_keys))
+        #logging.info("Response from Query : {}".format(subscription_keys))
         return {"status": "success", "message": "Subscription fetched successfully", "data": subscription_keys}
     except Exception as e:
         logging.info("EXCEPTION! {}".format(e))
@@ -66,7 +66,7 @@ def fetchAll(arangoClient):
         )
         # Iterate through the result cursor
         subscription_keys = [doc['_key'] for doc in cursor]
-        logging.info("Response from Query : {}".format(subscription_keys))
+        #logging.info("Response from Query : {}".format(subscription_keys))
         return {"status": "success", "message": "Subscriptions fetched successfully", "data": subscription_keys}
     except Exception as e:
         logging.info("EXCEPTION! {}".format(e))

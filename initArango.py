@@ -65,17 +65,6 @@ def setupArango(arangoClient):
                 pass
             else:
                 main.create_vertex_collection(collection)
-
-        ## Create set of Edges (relationship types between collections)
-        edges = [
-            {"edgeName":"HAS_SUBSCRIPTION","fromCollection":["customer"],"toCollection":["subscription"]},
-            {"edgeName":"OF_TYPE","fromCollection":["machine"],"toCollection":["machineType"]},
-            {"edgeName":"RUNS_SOFTWARE","fromCollection":["machine"],"toCollection":["software"]},
-            {"edgeName":"EMPLOYED_AT","fromCollection":["user"],"toCollection":["customer"]},
-            {"edgeName":"IN_REGION","fromCollection":["customer"],"toCollection":["region"]},
-            {"edgeName":"OPERATES_IN","fromCollection":["machine"],"toCollection":["region"]},
-            {"edgeName":"HAS_ROLE","fromCollection":["user"],"toCollection":["userRole"]}
-            ]
         
         for edge in edges:
             edgeName = edge['edgeName']

@@ -44,7 +44,7 @@ def fetchMachines(arangoClient,machineName):
         )
         # Iterate through the result cursor
         machine_keys = [doc['_key'] for doc in cursor]
-        logging.info("Response from Query : {}".format(machine_keys))
+        #logging.info("Response from Query : {}".format(machine_keys))
         return {"status": "success", "message": "Machines fetched successfully", "data": machine_keys}
     except Exception as e:
         logging.info("EXCEPTION! {}".format(e))
@@ -69,7 +69,7 @@ def fetchAll(arangoClient):
         )
         # Iterate through the result cursor
         machine_keys = [doc['_key'] for doc in cursor]
-        logging.info("Response from Query : {}".format(machine_keys))
+        #logging.info("Response from Query : {}".format(machine_keys))
         return {"status": "success", "message": "Machines fetched successfully", "data": machine_keys}
     except Exception as e:
         logging.info("EXCEPTION! {}".format(e))

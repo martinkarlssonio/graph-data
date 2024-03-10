@@ -47,7 +47,7 @@ def fetchCustomers(arangoClient,customerName):
         )
         # Iterate through the result cursor
         customer_keys = [doc['_key'] for doc in cursor]
-        logging.info("Response from Query : {}".format(customer_keys))
+        #logging.info("Response from Query : {}".format(customer_keys))
         return {"status": "success", "message": "Customers fetched successfully", "data": customer_keys}
     except Exception as e:
         logging.info("EXCEPTION! {}".format(e))
@@ -72,7 +72,7 @@ def fetchAll(arangoClient):
         )
         # Iterate through the result cursor
         customer_keys = [doc['_key'] for doc in cursor]
-        logging.info("Response from Query : {}".format(customer_keys))
+        #logging.info("Response from Query : {}".format(customer_keys))
         return {"status": "success", "message": "Customers fetched successfully", "data": customer_keys}
     except Exception as e:
         logging.info("EXCEPTION! {}".format(e))

@@ -41,7 +41,7 @@ def fetchUserRole(arangoClient,roleName):
         )
         # Iterate through the result cursor
         userRole_keys = [doc['_key'] for doc in cursor]
-        logging.info("Response from Query : {}".format(userRole_keys))
+        #logging.info("Response from Query : {}".format(userRole_keys))
         return {"status": "success", "message": "UserRoles fetched successfully", "data": userRole_keys}
     except Exception as e:
         logging.info("EXCEPTION! {}".format(e))
@@ -66,7 +66,7 @@ def fetchAll(arangoClient):
         )
         # Iterate through the result cursor
         userRole_keys = [doc['_key'] for doc in cursor]
-        logging.info("Response from Query : {}".format(userRole_keys))
+        #logging.info("Response from Query : {}".format(userRole_keys))
         return {"status": "success", "message": "UserRoles fetched successfully", "data": userRole_keys}
     except Exception as e:
         logging.info("EXCEPTION! {}".format(e))
