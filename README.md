@@ -58,10 +58,10 @@ These images are captured from ArangoDB's UI and shows the graph data structure 
 
 ### Start
 Recommended to use virtual environment for Python.
-```python -m venv venv```
-```source venv/bin/activate```
-```pip install -r requirements.txt```
-```python main.py```
+```python -m venv venv``` <br>
+```source venv/bin/activate``` <br>
+```pip install -r requirements.txt``` <br>
+```python main.py``` <br>
 
 
 <!-- CONTACT -->
