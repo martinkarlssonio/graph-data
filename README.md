@@ -57,7 +57,7 @@ These images are captured from ArangoDB's UI and shows the graph data structure 
 <li>Python 3.8 or later</li>
 
 ### Start
-Recommended to use virtual environment for Python.
+Recommended to use virtual environment for Python. <br>
 ```python -m venv venv``` <br>
 ```source venv/bin/activate``` <br>
 ```pip install -r requirements.txt``` <br>
